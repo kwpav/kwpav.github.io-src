@@ -45,7 +45,7 @@ Generate the output:
 #+BEGIN_SRC python
   pelican content
 #+END_SRC
-This creates generates the output into the =output= folder.
+This generates the output into the =output= folder.
 
 Preview the content:
 #+BEGIN_SRC sh
@@ -107,7 +107,7 @@ In order to define the metadata for Pelican, put the following in the =org= file
   ,#+PROPERTY: SAVE_AS alternative_filename.html
 #+END_SRC
 
-*** Org Python Reader Setup
+** Org Python Reader Setup
 Add the following to =pelicanconf.py=
 #+BEGIN_SRC python
   PLUGINS = ['org_python_reader']
@@ -122,7 +122,7 @@ This uses the same =org= headers as =org_reader=.
 
 One thing to note is that this plugin will always print out line numbers in =SRC= blocks due to its dependency on [[https://github.com/paetzke/orgco][orgco]].
 
-*** Org Pandoc Reader setup
+** Org Pandoc Reader setup
 In order to use [[https://github.com/jo-tham/org_pandoc_reader/tree/bf06b72c1bfe1831f3e4c872f6c833af0bec19bf][org_pandoc_reader]], you need to clone it as the =pelican-plugins= repo only links to it, it doesn't include it directly:
 #+BEGIN_SRC sh
   git clone https://github.com/jo-tham/org_pandoc_reader.git
@@ -149,7 +149,7 @@ Without =--standalone=, the SRC blocks don't have syntax highlighting. Source co
   ,#+TAGS: my, first, tags
 #+END_SRC
 
-*** Conclusion and other thoughts
+** Conclusion and other thoughts
 Using Pelican and org mode is pretty nice once its set up. Although I did run into some troubles initially, and I was able to fairly easily fix the issues I was having. I even submitted my first issues and PR's to an open source project that wasn't my own or a friends!
 
 - [[https://github.com/getpelican/pelican-plugins/pull/1066][Fix the processing of org files with SRC blocks.]]

@@ -1,0 +1,22 @@
+* kwpav.github.io-src
+This is the source for [[https://kwpav.github.io][kwpav.github.io]]. It is generated using [[https://getpelican.com][Pelican]] and [[https://orgmode.org][Org mode]].
+
+The =output/= folder is a git submodule of [[https://github.com/kwpav/kwpav.github.io][kwpav/kwpav.github.io]].
+
+For development, start the server:
+#+BEGIN_SRC sh
+  make devserver
+#+END_SRC
+
+Navigate to [[http://localhost:8000][http://localhost:8000]] to preview the site.
+
+Stop the server:
+#+BEGIN_SRC sh
+  make stopserver
+#+END_SRC
+
+Generate output for production:
+#+BEGIN_SRC sh
+  make publish
+#+END_SRC
+

@@ -4,11 +4,12 @@
 #+AUTHOR: Kevin Pavao
 #+PROPERTY: LANGUAGE en
 #+PROPERTY: SUMMARY Setting up Pelican to use org mode
-#+PROPERTY: SLUG pelican_org_mode 
-#+PROPERTY: MODIFIED [2018-09-23 Di]
-#+PROPERTY: TAGS pelican, tutorial, orgmode
-#+OPTIONS: toc:nil
+#+PROPERTY: SLUG pelican_org_mode
+#+PROPERTY: MODIFIED [2018-09-24 Di]
+#+PROPERTY: TAGS pelican, tutorial, org-mode
+#+OPTIONS: toc:t
 
+* Introduction
 One of the first things you need to do after deciding to start a blog, is setting one up. So I figured it would be appropriate that the first post of my blog is about how I set this up.
 
 My requirements are fairly simple:
@@ -45,7 +46,7 @@ Generate the output:
 #+BEGIN_SRC python
   pelican content
 #+END_SRC
-This creates generates the output into the =output= folder.
+This generates the output into the =output= folder.
 
 Preview the content:
 #+BEGIN_SRC sh
@@ -63,7 +64,7 @@ Generate and preview the content with =make= instead of =pelican=:
 
 It can also do some other cool stuff like generating the production version of the website, use GitHub's =gh-pages= branch, etc. See how to use it from the [[http://docs.getpelican.com/en/stable/publish.html?highlight=makefile#make][official docs]].
 
-* Using org mode
+* Using org-mode
 In order to use =org-mode=, you need to install a plugin.
 
 To install a plugin, clone the [[https://github.com/getpelican/pelican-plugins][pelican-plugins]] repo:
@@ -71,7 +72,7 @@ To install a plugin, clone the [[https://github.com/getpelican/pelican-plugins][
   git clone --recursive https://github.com/getpelican/pelican-plugins
 #+END_SRC
 
-Add the path and the plugin to to your =pelicanconf.py=:
+Add the path and the plugin to your =pelicanconf.py=:
 #+BEGIN_SRC python
   PLUGIN_PATHS = ['path/to/pelican-plugins']
   PLUGINS = ['org_reader']
@@ -107,7 +108,7 @@ In order to define the metadata for Pelican, put the following in the =org= file
   ,#+PROPERTY: SAVE_AS alternative_filename.html
 #+END_SRC
 
-*** Org Python Reader Setup
+** Org Python Reader Setup
 Add the following to =pelicanconf.py=
 #+BEGIN_SRC python
   PLUGINS = ['org_python_reader']
@@ -122,7 +123,7 @@ This uses the same =org= headers as =org_reader=.
 
 One thing to note is that this plugin will always print out line numbers in =SRC= blocks due to its dependency on [[https://github.com/paetzke/orgco][orgco]].
 
-*** Org Pandoc Reader setup
+** Org Pandoc Reader setup
 In order to use [[https://github.com/jo-tham/org_pandoc_reader/tree/bf06b72c1bfe1831f3e4c872f6c833af0bec19bf][org_pandoc_reader]], you need to clone it as the =pelican-plugins= repo only links to it, it doesn't include it directly:
 #+BEGIN_SRC sh
   git clone https://github.com/jo-tham/org_pandoc_reader.git
@@ -134,7 +135,7 @@ Add the following to =pelicanconf.py=
   ORG_PANDOC_ARGS = ['--standalone',]
 #+END_SRC
 
-Without =--standalone=, the SRC blocks don't have syntax highlighting. Source code blocks are also underlined for me in some themes for some reason. I might take a look at why that is happening later.
+Without =--standalone=, the =SRC= blocks don't have syntax highlighting. Source code blocks are also underlined for me in some themes for some reason. I might take a look at why that is happening later.
 
 =org_pandoc_reader= also does not use =PROPERTY= to generate metadata, you just use the name of the setting directly, e.g.:
 #+BEGIN_SRC org
@@ -149,12 +150,12 @@ Without =--standalone=, the SRC blocks don't have syntax highlighting. Source co
   ,#+TAGS: my, first, tags
 #+END_SRC
 
-*** Conclusion and other thoughts
-Using Pelican and org mode is pretty nice once its set up. Although I did run into some troubles initially, and I was able to fairly easily fix the issues I was having. I even submitted my first issues and PR's to an open source project that wasn't my own or a friends!
+* Conclusion and Other Thoughts
+Using Pelican and org-mode is pretty nice once its set up. Although I did run into some troubles initially, and I was able to fairly easily fix the issues I was having. I even submitted my first issues and PR's to an open source project that wasn't my own or a friends!
 
 - [[https://github.com/getpelican/pelican-plugins/pull/1066][Fix the processing of org files with SRC blocks.]]
 - [[https://github.com/getpelican/pelican-plugins/pull/1064][Fix loading of org_reader plugins.]]
 
-I am using the =org_reader= plugin right now, but I'm not sure if I'll stick with it, the abilties that =pandoc= have look pretty nice too.
+I am using the =org_reader= plugin right now, but I'm not sure if I'll stick with it, =pandoc= have look pretty nice too.
 
 In my testing of different static site generators, I tried [[https://gohugo.io/][Hugo]], written in go, along with the [[https://ox-hugo.scripter.co/][ox-hugo]] package for Emacs. I really liked it as =ox-hugo= gives you the ability to have several posts/pages/etc in a single org file. I would ultimately like to set something like that up for Pelican, but that's a task for a later day.

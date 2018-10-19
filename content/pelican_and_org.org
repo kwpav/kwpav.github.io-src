@@ -7,8 +7,9 @@
 #+PROPERTY: SLUG pelican_org_mode
 #+PROPERTY: MODIFIED [2018-09-24 Di]
 #+PROPERTY: TAGS pelican, tutorial, org-mode
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:t
 
+* Introduction
 One of the first things you need to do after deciding to start a blog, is setting one up. So I figured it would be appropriate that the first post of my blog is about how I set this up.
 
 My requirements are fairly simple:
@@ -149,12 +150,12 @@ Without =--standalone=, the =SRC= blocks don't have syntax highlighting. Source 
   ,#+TAGS: my, first, tags
 #+END_SRC
 
-** Conclusion and other thoughts
-Using Pelican and org mode is pretty nice once its set up. Although I did run into some troubles initially, and I was able to fairly easily fix the issues I was having. I even submitted my first issues and PR's to an open source project that wasn't my own or a friends!
+* Conclusion and Other Thoughts
+Using Pelican and org-mode is pretty nice once its set up. Although I did run into some troubles initially, and I was able to fairly easily fix the issues I was having. I even submitted my first issues and PR's to an open source project that wasn't my own or a friends!
 
 - [[https://github.com/getpelican/pelican-plugins/pull/1066][Fix the processing of org files with SRC blocks.]]
 - [[https://github.com/getpelican/pelican-plugins/pull/1064][Fix loading of org_reader plugins.]]
 
-I am using the =org_reader= plugin right now, but I'm not sure if I'll stick with it, the abilities that =pandoc= have look pretty nice too.
+I am using the =org_reader= plugin right now, but I'm not sure if I'll stick with it, =pandoc= have look pretty nice too.
 
 In my testing of different static site generators, I tried [[https://gohugo.io/][Hugo]], written in go, along with the [[https://ox-hugo.scripter.co/][ox-hugo]] package for Emacs. I really liked it as =ox-hugo= gives you the ability to have several posts/pages/etc in a single org file. I would ultimately like to set something like that up for Pelican, but that's a task for a later day.

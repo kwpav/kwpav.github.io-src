@@ -39,4 +39,4 @@ PLUGIN_PATHS = ['/home/kevin/projects/pelican-plugins']
 PLUGINS = ['org_reader']
 ORG_READER_EMACS_LOCATION = '/usr/bin/emacs'
 
-THEME = "./pelican-themes/mnmlist"
+THEME = "./my-theme1"

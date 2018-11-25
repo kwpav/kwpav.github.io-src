@@ -15,7 +15,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background: #fffff8;
-    color: #112;
+    color: #303030;
     font-size: 15px;
 }
 
@@ -45,13 +45,9 @@ body {
     }
 }
 
-h1 a { color: inherit !important }
-h2 a { color: inherit !important }
-h3 a { color: inherit !important }
-h4 a { color: inherit !important }
-h5 a { color: inherit !important }
-h6 a { color: inherit !important }
-
+h1, h2, h3, h4, h5, h6 {
+    color: #505050;
+}
 
 h1, h2 {
     font-weight: 400;
@@ -82,7 +78,8 @@ h2 {
 p, ol, dl, ul {
     font-size: 1.4em;
     margin-top: 1.3em;
-    margin-bottom: 1.3em
+    margin-bottom: 1.3em;
+    color: #151515;
 }
 
 a:link:not([class]), a:visited:not([class]) {
@@ -120,6 +117,18 @@ a:link:not([class])::-moz-selection {
 pre {
     margin: 2em 1em 2em 4em;
     white-space: pre-wrap;
+    display: block;
+    padding: 1rem;
+}
+
+code {
+    color: #bf616a;
+    background: #f9f9f9;
+}
+
+.src {
+    background: #f9f9f9;
+    font-family: monospace;
 }
 
 #menu li {
@@ -131,3 +140,9 @@ pre {
     margin-top: 1em;
 }
 
+#text-table-of-contents ul > li > ul {
+    /* if we dont inherit the font size, the second level's font is larger than the rest */
+    font-size: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+}

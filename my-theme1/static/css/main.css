@@ -1,50 +1,8 @@
-@import 'et-book.css';
-
 /* 
-
-
-   body {
-   font-family: monospace;
-   font-size: 100%;
-   background-color: white;
-   color: #111;
-   width: 80%;
-   min-width: 400px;
-   min-height: 200px;
-   padding: 1em;
-   margin: 5% 10%;
-   border: thin solid gray;
-   border-radius: 5px;
-   display: block;
-   }
-
-   a:link    { color: blue; text-decoration: none;      }
-   a:hover   { color: blue; text-decoration: underline; }
-   a:visited { color: blue;                             }
-
-   h1 a { color: inherit !important }
-   h2 a { color: inherit !important }
-   h3 a { color: inherit !important }
-   h4 a { color: inherit !important }
-   h5 a { color: inherit !important }
-   h6 a { color: inherit !important }
- */
-#menu li {
-    display: inline;
-}
-
-#post-list {
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-/* pre {
-   margin: 2em 1em 2em 4em;
-   white-space: pre-wrap;
-   }
-
+ * This is based off of the et-book css
  */
 
+@import 'et-book.css';
 
 * {
     margin: 0
@@ -157,5 +115,19 @@ a:link:not([class])::selection {
 a:link:not([class])::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
+}
+
+pre {
+    margin: 2em 1em 2em 4em;
+    white-space: pre-wrap;
+}
+
+#menu li {
+    display: inline;
+}
+
+#post-list {
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 

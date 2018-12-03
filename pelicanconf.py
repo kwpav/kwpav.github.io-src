@@ -32,11 +32,11 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # Plugin setup
 PLUGIN_PATHS = ['/home/kevin/projects/pelican-plugins']
 PLUGINS = ['org_reader']
 ORG_READER_EMACS_LOCATION = '/usr/bin/emacs'
 
-THEME = "./my-theme1"
+THEME = "./my-theme"

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/rdark.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
+    <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+    {%- if FEED_RSS %}<link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />{% endif -%}
+  </head>
+  <body>
+    <nav id="site-header">
+      <ul>
+        <li>
+          <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+        </li>
+      </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

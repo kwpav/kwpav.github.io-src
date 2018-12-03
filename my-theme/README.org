@@ -1,0 +1,4 @@
+* My Theme
+Custom theme [[https://kwpav.github.io][kwpav.github.io]]
+
+It uses the [[https://github.com/edwardtufte/et-book][et-book]] font.
